@@ -9,4 +9,6 @@ for (let index = 0; index < 10; index++) {
   message = `${message}5 X ${index + 1} = ${5 * (index + 1)} \n`
 }
 
-createTable(message);
+createTable(message)
+  .then((succes) => console.log(succes))
+  .catch((error) => console.log(error))

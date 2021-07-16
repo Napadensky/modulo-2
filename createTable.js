@@ -7,10 +7,10 @@ const ruta = path.join(__dirname, 'tabla-5.txt')
 
 // usar fs para guardar la tabla y terminar el programa
 const createFile = (message) => {
-  fs.writeFile(ruta, message, function (err) {
-    if (err) throw err;
-    console.log('Archivo creado');
+  return new Promise((resolve, reject) => {
+    fs.writeFile(ruta, message, (err) => err ? reject(err) : resolve('Todo salio bien') );
   });
 }
 
+// Exportar la funcion
 module.exports = createFile;
