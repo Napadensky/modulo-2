@@ -1,0 +1,23 @@
+{
+  "name": "modulo-2",
+  "version": "1.0.0",
+  "description": "* [Tarea-1](https://github.com/Napadensky/modulo-2/tree/tarea-1)\r * [Tarea-2](https://github.com/Napadensky/modulo-2/tree/tarea-2)\r * [Tarea-3](https://github.com/Napadensky/modulo-2/tree/tarea-3)\r * [Tarea-3](https://github.com/Napadensky/modulo-2/tree/tarea-4)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Napadensky/modulo-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Napadensky/modulo-2/issues"
+  },
+  "homepage": "https://github.com/Napadensky/modulo-2#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
