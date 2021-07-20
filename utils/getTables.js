@@ -3,7 +3,7 @@ const GetTabla = (num = 0) => {
   const limit = 10;
   let template = "";
   for (let i = 1; i <= limit; i++) {
-    template += `${num} x ${i} = ${i * num} \n`;
+    template += `${num} X ${i} = ${i * num} \n`;
   }
   return template;
 }

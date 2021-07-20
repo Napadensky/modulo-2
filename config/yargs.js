@@ -17,5 +17,5 @@ const argv = require('yargs')
     if (argv.b > 20 || argv.b < 1) throw '-> Debes colocar un valor de base entre 1 y 20'.red;
     return true;
   }).argv
-
+  
 module.exports = argv;

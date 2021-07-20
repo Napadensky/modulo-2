@@ -5,9 +5,13 @@ const createFile = (message, base) => {
   const ruta = path.join(__dirname, `tabla-${base}.txt`)
   return new Promise((resolve, reject) => {
     fs.writeFile(
-      ruta.replace('utils', 'results'),
+      ruta.replace('utils', 'output'),
       message,
-      (err) => err ? reject(err) : resolve('-> Todo salio bien fin de la tabla'));
+      (err) => {
+        err
+          ? reject('-> Algo salio mal, no se guardo el archivo')
+          : resolve('-> Archivo guardado con éxito')
+      });
   });
 }
 

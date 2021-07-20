@@ -3,16 +3,17 @@ const getTables = require('./utils/getTables');
 const yargs = require('./config/yargs')
 require('colors');
 
-const { b, l } = yargs
-let message = ''
+const { base, listar } = yargs
+const message = getTables(base)
 
-message = getTables(b)
-console.log('\n')
-console.log('======================'.bgBlue);
-console.log(`Esta es la tabla del ${b}`.rainbow);
-console.log('======================'.bgBlue);
-if (l) console.log(message.rainbow);
+if (listar) {
+  console.log('\n')
+  console.log('======================'.bgBlue);
+  console.log(`Esta es la tabla del ${base}`.rainbow);
+  console.log('======================'.bgBlue);
+  console.log(message.replace(/X/g, 'X'.blue).replace(/=/g, '='.blue));
+}
 
-createTable(message, b)
+createTable(message, base)
   .then((succes) => console.log(succes.green))
   .catch((error) => console.log(error.red))
