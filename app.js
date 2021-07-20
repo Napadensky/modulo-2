@@ -1,15 +1,11 @@
 // requiriendo modulo
 const createTable = require('./createTable');
+const yargs = require('./config/yargs')
 const colors = require('colors');
-const yargs = require('yargs').options('b',{
-  alias: 'base',
-  type: 'number',
-  demandOption: true
-}).argv
 
 let message = ''; // crear variable para acumular tabla
 const {b} = yargs // obtener base POR YARGS
-if (!Number(b)) throw new Error('base no es un numero') // validar que sea un nuemero
+// if (!Number(b)) throw new Error('base no es un numero') // validar que sea un nuemero
 
 // for para iterar y crear tabla
 for (let index = 0; index < 10; index++) {
