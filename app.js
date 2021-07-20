@@ -3,6 +3,7 @@ const createTable = require('./createTable');
 const colors = require('colors');
 const yargs = require('yargs')
 
+yargs.demand('base')
 
 let message = ''; // crear variable para acumular tabla
 const {base} = yargs.argv // obtener base POR YARGS
