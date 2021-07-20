@@ -1,20 +1,17 @@
-// requiriendo modulo
-const createTable = require('./createTable');
+const createTable = require('./utils/createFile');
+const getTables = require('./utils/getTables');
 const yargs = require('./config/yargs')
-const colors = require('colors');
+require('colors');
 
-let message = ''; // crear variable para acumular tabla
-const {b} = yargs // obtener base POR YARGS
-// if (!Number(b)) throw new Error('base no es un numero') // validar que sea un nuemero
+const { b, l } = yargs
+let message = ''
 
-// for para iterar y crear tabla
-for (let index = 0; index < 10; index++) {
-  message += `${b} X ${index + 1} = ${b * (index + 1)} \n`
-}
-console.log('\n====================='.bgBlue);
+message = getTables(b)
+console.log('\n')
+console.log('======================'.bgBlue);
 console.log(`Esta es la tabla del ${b}`.rainbow);
-console.log('====================='.bgBlue);
-console.log(message.rainbow); // imprimir tabla por consola
+console.log('======================'.bgBlue);
+if (l) console.log(message.rainbow);
 
 createTable(message, b)
   .then((succes) => console.log(succes.green))
