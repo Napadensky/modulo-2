@@ -8,9 +8,9 @@ const message = getTables(base)
 
 if (listar) {
   console.log('\n')
-  console.log('======================'.bgBlue);
-  console.log(`Esta es la tabla del ${base}`.rainbow);
-  console.log('======================'.bgBlue);
+  console.log('========================'.bgBlue);
+  console.log(`Esta es la tabla del: ${base}`.rainbow);
+  console.log('========================'.bgBlue);
   console.log(message.replace(/X/g, 'X'.blue).replace(/=/g, '='.blue));
 }
 
