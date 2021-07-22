@@ -6,6 +6,7 @@ require('colors');
 const { base, listar } = yargs;
 const message = getTables(base);
 
+console.log(listar);
 if (listar) {
   console.log('\n');
   console.log('========================'.bgBlue);
